@@ -2,11 +2,12 @@ var jmlAngkot = 10;
 var angkotBeroperasi = 6;
 var noAngkot = 1;
 
-while(noAngkot <= angkotBeroperasi){
-    console.log('Angkot No. '+noAngkot+' sedang beroperasi dengan baik');
-    noAngkot++;
-}
-
-for(noAngkot = angkotBeroperasi +1 ; noAngkot <= jmlAngkot; noAngkot++){
-    console.log('Angkot No. '+noAngkot+' sedang tidak beroperasi');
+for(var noAngkot = 1; noAngkot <= jmlAngkot; noAngkot++){
+    if(noAngkot <= angkotBeroperasi){
+        console.log('Angkot No. '+noAngkot+' sedang beroperasi dengan baik');
+    } else if(noAngkot == 8){
+        console.log('Angkot No. '+noAngkot+' sedang lembur');
+    }else {
+        console.log('Angkot No. '+noAngkot+' sedang tidak beroperasi');
+    }
 }
